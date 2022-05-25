@@ -1,14 +1,12 @@
 package ru.gb.persist;
 
-import java.math.BigDecimal;
-
 public class Product {
     private Long id;
-    private String productName;
-    private int price;
+    private String title;
+    private int cost;
 
-    public Product(String productName) {
-        this.productName = productName;
+    public Product(String title) {
+        this.title = title;
     }
 
     public Long getId() {
@@ -20,18 +18,18 @@ public class Product {
     }
 
     public String getName() {
-        return productName;
+        return title;
     }
 
     public void setName(String productName) {
-        this.productName = productName;
+        this.title = productName;
     }
 
-    public int getPrice() {
-        return price;
+    public int getCost() {
+        return cost;
     }
 
-    public void setPrice(double price) {
-        this.price = (int)price;
+    public void setCost(double cost) {
+        this.cost = (int) cost;
     }
 }

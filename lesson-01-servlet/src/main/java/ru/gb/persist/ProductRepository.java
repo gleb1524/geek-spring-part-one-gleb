@@ -23,7 +23,7 @@ public class ProductRepository {
     public void insert(Product product) {
         long id = identity.incrementAndGet();
         product.setId(id);
-        product.setPrice(Math.random() * 15000);
+        product.setCost(Math.random() * 15000);
         productMap.put(id, product);
     }
 

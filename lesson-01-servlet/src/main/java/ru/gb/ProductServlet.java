@@ -33,14 +33,14 @@ public class ProductServlet extends HttpServlet {
         wr.println("<table>");
         wr.println("<tr>");
         wr.println("<th>Id</th>");
-        wr.println("<th>Product-name</th>");
-        wr.println("<th>Price</th>");
+        wr.println("<th>Title</th>");
+        wr.println("<th>Cost</th>");
         wr.println("</tr>");
 
         for (Product product : productRepository.findAll()) {
             if (pathInformation.equals(String.format("/%d", product.getId()))) {
                 wr.println(String.format("<tr><td>%d</td><td>%s</td><td>%d</td>",
-                        product.getId(), product.getName(), product.getPrice()));
+                        product.getId(), product.getName(), product.getCost()));
                 break;
             }
         }
